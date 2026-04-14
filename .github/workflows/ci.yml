@@ -40,6 +40,7 @@ jobs:
           path: .vitest/chromatic/*
           include-hidden-files: true
           retention-days: 1
+          overwrite: true
 
       - name: Upload blob report to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
@@ -49,6 +50,7 @@ jobs:
           path: .vitest-reports/*
           include-hidden-files: true
           retention-days: 1
+          overwrite: true
 
       - name: Upload attachments to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
@@ -58,6 +60,7 @@ jobs:
           path: .vitest-attachments/**
           include-hidden-files: true
           retention-days: 1
+          overwrite: true
 
   merge-reports:
     if: ${{ !cancelled() }}
