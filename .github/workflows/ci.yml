@@ -35,7 +35,7 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
-          cat chromatic/preview-stats.json
+          cat chromatic/preview-stats*
 
       - name: Upload Chromatic archives to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
@@ -110,10 +110,18 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
-          cat chromatic/preview-stats.json
+          cat chromatic/preview-stats*
 
       - name: Merge reports
         run: npx vitest --merge-reports
+
+      - name: Debugs after merge
+        run: |
+          ls -la
+          ls -la .vitest*
+          cd .vitest
+          tree
+          cat chromatic/preview-stats*
 
       - name: Run Chromatic tests
         uses: chromaui/action@latest
