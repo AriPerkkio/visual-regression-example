@@ -49,8 +49,8 @@ importers:
         version: 1.4.0
     devDependencies:
       '@chromatic-com/vitest':
-        specifier: https://pkg.pr.new/@chromatic-com/vitest@c64f02d
-        version: https://pkg.pr.new/@chromatic-com/vitest@c64f02d(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)
+        specifier: ^0.1.7
+        version: 0.1.7(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)
       '@types/react':
         specifier: ^19.1.2
         version: 19.2.14
@@ -65,7 +65,7 @@ importers:
         version: 4.1.8(msw@2.13.2)(playwright@1.59.1)(vite@8.0.8(esbuild@0.27.7)(jiti@2.6.1))(vitest@4.1.8)
       chromatic:
         specifier: ^17
-        version: 17.4.1(@chromatic-com/vitest@https://pkg.pr.new/@chromatic-com/vitest@c64f02d(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8))
+        version: 17.4.1(@chromatic-com/vitest@0.1.7(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8))
       msw:
         specifier: ^2.12.13
         version: 2.13.2
@@ -229,9 +229,8 @@ packages:
   '@blazediff/core@1.9.1':
     resolution: {integrity: sha512-ehg3jIkYKulZh+8om/O25vkvSsXXwC+skXmyA87FFx6A/45eqOkZsBltMw/TVteb0mloiGT8oGRTcjRAz66zaA==}
 
-  '@chromatic-com/vitest@https://pkg.pr.new/@chromatic-com/vitest@c64f02d':
-    resolution: {integrity: sha512-dmd3vg2o9/KtGuKEV9LPxVAB02aPfM0iH4b9pcN5026Mut+V07r4+OSHlTKAz9ZrIuHvHIfpFupeJnVoqV3QaA==, tarball: https://pkg.pr.new/@chromatic-com/vitest@c64f02d}
-    version: 0.1.3
+  '@chromatic-com/vitest@0.1.7':
+    resolution: {integrity: sha512-mZGA3rpU2HmarX2RAuUXVbe7hj8LxjypKYQPUahOn9BQWH+lvhfGofwM/jcBVaxm/Pwt92vuUJb222w8QsQXSQ==}
     hasBin: true
     peerDependencies:
       vitest: ^4
@@ -1760,7 +1759,6 @@ packages:
 
   chromatic@17.4.1:
     resolution: {integrity: sha512-qL1f0IhOBi0Z6kpQZGR62fJzzCOdjFJLHrJw3QL9YNktj2Kl3+adlU+6psqNGfZUycKF7+pizCSbhsUQNIS/uQ==}
-    version: 17.4.1
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -2900,10 +2898,6 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  slash@5.1.0:
-    resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
-    engines: {node: '>=14.16'}
-
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -3501,11 +3495,10 @@ snapshots:
 
   '@blazediff/core@1.9.1': {}
 
-  '@chromatic-com/vitest@https://pkg.pr.new/@chromatic-com/vitest@c64f02d(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)':
+  '@chromatic-com/vitest@0.1.7(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)':
     dependencies:
       '@chromaui/rrweb-snapshot': 2.0.0-alpha.19-noAbsolute
       '@segment/analytics-node': 2.1.3
-      slash: 5.1.0
       storybook: 10.2.13(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       tinyrainbow: 3.1.0
       vitest: 4.1.8(@vitest/browser-playwright@4.1.8)(@vitest/ui@4.1.8)(msw@2.13.2)(vite@8.0.8(esbuild@0.27.7)(jiti@2.6.1))
@@ -5003,11 +4996,11 @@ snapshots:
 
   check-error@2.1.3: {}
 
-  chromatic@17.4.1(@chromatic-com/vitest@https://pkg.pr.new/@chromatic-com/vitest@c64f02d(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)):
+  chromatic@17.4.1(@chromatic-com/vitest@0.1.7(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)):
     dependencies:
       semver: 7.7.4
     optionalDependencies:
-      '@chromatic-com/vitest': https://pkg.pr.new/@chromatic-com/vitest@c64f02d(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)
+      '@chromatic-com/vitest': 0.1.7(@testing-library/dom@10.4.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.8)
 
   class-variance-authority@0.7.1:
     dependencies:
@@ -6122,8 +6115,6 @@ snapshots:
       totalist: 3.0.1
 
   sisteransi@1.0.5: {}
-
-  slash@5.1.0: {}
 
   source-map-js@1.2.1: {}
 
