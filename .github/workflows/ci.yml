@@ -35,6 +35,7 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
+          cat chromatic/preview-stats.json
 
       - name: Upload Chromatic archives to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
@@ -109,6 +110,7 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
+          cat chromatic/preview-stats.json
 
       - name: Merge reports
         run: npx vitest --merge-reports
