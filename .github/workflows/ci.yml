@@ -124,7 +124,7 @@ jobs:
           cat chromatic/preview-stats*
 
       - name: Run Chromatic tests
-        uses: chromaui/action@latest
+        uses: chromaui/action-canary@v18.5.1--canary.1465.32835334792.0
         with:
           vitest: true
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
