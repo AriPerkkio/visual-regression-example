@@ -10,12 +10,14 @@
     "upload": "chromatic --vitest -t $CHROMATIC_PROJECT_TOKEN"
   },
   "devDependencies": {
-    "@chromatic-com/vitest": "0.1.7",
+    "@chromatic-com/cypress": "^0.13.2",
+    "@chromatic-com/playwright": "^0.14.12",
+    "@chromatic-com/vitest": "0.1.9",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "6.0.1",
     "@vitest/browser-playwright": "4.1.0",
-    "chromatic": "18.1.1--canary.1431.31413813820.0",
+    "chromatic": "18.5.1--canary.1465.32835334792.0",
     "msw": "^2.12.13",
     "playwright": "1.52.0",
     "react": "19.1.0",
