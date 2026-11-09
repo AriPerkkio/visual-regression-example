@@ -49,8 +49,8 @@ importers:
         version: 1.4.0
     devDependencies:
       '@chromatic-com/vitest':
-        specifier: 0.1.10
-        version: 0.1.10(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)
+        specifier: 1.0.1
+        version: 1.0.1(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)
       '@types/react':
         specifier: ^19.1.2
         version: 19.2.14
@@ -65,7 +65,7 @@ importers:
         version: 4.1.0(msw@2.13.2)(playwright@1.52.0)(vite@8.0.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(esbuild@0.27.7)(jiti@2.6.1))(vitest@4.1.0)
       chromatic:
         specifier: 18.1.1--canary.1431.31413813820.0
-        version: 18.1.1--canary.1431.31413813820.0(@chromatic-com/vitest@0.1.10(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0))
+        version: 18.1.1--canary.1431.31413813820.0(@chromatic-com/vitest@1.0.1(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0))
       msw:
         specifier: ^2.12.13
         version: 2.13.2
@@ -229,11 +229,11 @@ packages:
   '@blazediff/core@1.9.1':
     resolution: {integrity: sha512-ehg3jIkYKulZh+8om/O25vkvSsXXwC+skXmyA87FFx6A/45eqOkZsBltMw/TVteb0mloiGT8oGRTcjRAz66zaA==}
 
-  '@chromatic-com/vitest@0.1.10':
-    resolution: {integrity: sha512-3KYEoi39lIe8omTp+S8Q5fg/J/Y4umau6p5dmbwDfA5p5YA/BSt2Xgy5AACVeqk/naD/2K/IVcUmwgUVMPe3IA==}
+  '@chromatic-com/vitest@1.0.1':
+    resolution: {integrity: sha512-A6slRcJ8FxT++X3YUJ3sPySiXGARplSKWh5yrZDr/WA8FK86NBGrtDpe3E6uhYFvOpqzMiR2z3kM0dcMrZWfqw==}
     hasBin: true
     peerDependencies:
-      vitest: ^4
+      vitest: ^4 || ^5
 
   '@chromaui/rrweb-snapshot@2.0.0-alpha.19-noAbsolute':
     resolution: {integrity: sha512-FTsZCNv4dBR8q4UcazvxRw721r6xtsRKkC6Xo8NiEXDekA/JbVDHuWkPxxM0IvyX9Vo/yhCsYviXFrUqqeOaVQ==}
@@ -3430,7 +3430,7 @@ snapshots:
 
   '@blazediff/core@1.9.1': {}
 
-  '@chromatic-com/vitest@0.1.10(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)':
+  '@chromatic-com/vitest@1.0.1(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)':
     dependencies:
       '@chromaui/rrweb-snapshot': 2.0.0-alpha.19-noAbsolute
       std-env: 4.2.0
@@ -4886,11 +4886,11 @@ snapshots:
 
   check-error@2.1.3: {}
 
-  chromatic@18.1.1--canary.1431.31413813820.0(@chromatic-com/vitest@0.1.10(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)):
+  chromatic@18.1.1--canary.1431.31413813820.0(@chromatic-com/vitest@1.0.1(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)):
     dependencies:
       semver: 7.7.4
     optionalDependencies:
-      '@chromatic-com/vitest': 0.1.10(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)
+      '@chromatic-com/vitest': 1.0.1(@testing-library/dom@10.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vitest@4.1.0)
 
   class-variance-authority@0.7.1:
     dependencies:

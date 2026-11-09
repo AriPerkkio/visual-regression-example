@@ -10,7 +10,7 @@
     "upload": "chromatic --vitest -t $CHROMATIC_PROJECT_TOKEN"
   },
   "devDependencies": {
-    "@chromatic-com/vitest": "0.1.10",
+    "@chromatic-com/vitest": "1.0.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "6.0.1",
