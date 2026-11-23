@@ -23,9 +23,6 @@ jobs:
       - name: Install dependencies
         run: pnpm i
 
-      - name: Install Playwright Dependencies
-        run: pnpm exec playwright install chromium --with-deps --only-shell
-
       - name: Run tests
         run: pnpm run test --reporter=blob --shard=${{ matrix.shard }}/${{ strategy.job-total }}
 
