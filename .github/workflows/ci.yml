@@ -27,6 +27,7 @@ jobs:
         run: pnpm run test --reporter=blob --shard=${{ matrix.shard }}/${{ strategy.job-total }}
 
       - name: Debugs
+        continue-on-error: true
         run: |
           ls -la
           ls -la .vitest*
@@ -70,6 +71,7 @@ jobs:
           merge-multiple: true
 
       - name: Debugs
+        continue-on-error: true
         run: |
           ls -la
           ls -la .vitest*
@@ -81,6 +83,7 @@ jobs:
         run: npx vitest --merge-reports
 
       - name: Debugs after merge
+        continue-on-error: true
         run: |
           ls -la
           ls -la .vitest*

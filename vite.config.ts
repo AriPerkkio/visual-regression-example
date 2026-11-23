@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { chromaticPlugin } from "@chromatic-com/vitest/plugin";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), chromaticPlugin({ turboSnap: true })],
+  plugins: [react(), tailwindcss(), chromaticPlugin({ turboSnap: false })],
 
   resolve: {
     tsconfigPaths: true,
