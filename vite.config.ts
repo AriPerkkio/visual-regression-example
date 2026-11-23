@@ -19,6 +19,9 @@ export default defineConfig({
   server: {
     fs: { strict: false },
   },
+
+  publicDir: "test/public-dir",
+
   test: {
     setupFiles: ["./test/setup.ts"],
     browser: {
