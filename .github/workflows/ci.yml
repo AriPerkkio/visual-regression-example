@@ -4,6 +4,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      chromatic-vitest-version:
+        description: 'Version of "@chromatic-com/vitest" to install (npm version/tag or pkg.pr.new URL). Leave empty to use package.json.'
+        required: false
+        default: ''
 
 jobs:
   tests:
@@ -22,6 +27,18 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i
+
+      - name: Install @chromatic-com/vitest@${{ inputs.chromatic-vitest-version }}
+        if: ${{ inputs.chromatic-vitest-version != '' }}
+        env:
+          VERSION: ${{ inputs.chromatic-vitest-version }}
+        run: |
+          if [[ "$VERSION" == *"://"* ]]; then
+            pnpm add -D "$VERSION"
+          else
+            pnpm add -D "@chromatic-com/vitest@$VERSION"
+          fi
+          pnpm ls @chromatic-com/vitest
 
       - name: Run tests
         run: pnpm run test --reporter=blob --shard=${{ matrix.shard }}/${{ strategy.job-total }}
@@ -62,6 +79,18 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i
+
+      - name: Install @chromatic-com/vitest@${{ inputs.chromatic-vitest-version }}
+        if: ${{ inputs.chromatic-vitest-version != '' }}
+        env:
+          VERSION: ${{ inputs.chromatic-vitest-version }}
+        run: |
+          if [[ "$VERSION" == *"://"* ]]; then
+            pnpm add -D "$VERSION"
+          else
+            pnpm add -D "@chromatic-com/vitest@$VERSION"
+          fi
+          pnpm ls @chromatic-com/vitest
 
       - name: Download .vitest archives from GitHub Actions Artifacts
         uses: actions/download-artifact@v4
