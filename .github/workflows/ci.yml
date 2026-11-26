@@ -8,7 +8,7 @@ on:
       chromatic-vitest-version:
         description: 'Version of "@chromatic-com/vitest" to install (npm version/tag or pkg.pr.new URL). Leave empty to use package.json.'
         required: false
-        default: ''
+        default: ""
 
 jobs:
   tests:
@@ -50,6 +50,7 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
+          cat chromatic/telemetry-metadata.json
           cat chromatic/preview-stats*
 
       - name: Upload .vitest to GitHub Actions Artifacts
@@ -106,6 +107,7 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
+          cat chromatic/telemetry-metadata.json
           cat chromatic/preview-stats*
 
       - name: Merge reports
@@ -118,6 +120,7 @@ jobs:
           ls -la .vitest*
           cd .vitest
           tree
+          cat chromatic/telemetry-metadata.json
           cat chromatic/preview-stats*
 
       - name: Run Chromatic tests
